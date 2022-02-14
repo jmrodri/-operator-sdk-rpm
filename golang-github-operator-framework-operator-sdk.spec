@@ -49,8 +49,10 @@ make build/operator-sdk
 
 %install
 %gopkginstall
-# install -m 0755 -vd                     %{buildroot}%{_bindir}
-# install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
+install -m 0755 -vd %{buildroot}%{_bindir}
+install build/operator-sdk %{buildroot}%{_bindir}/operator-sdk
+# install -m 0755 -vd                     % {buildroot}% {_bindir}
+# install -m 0755 -vp % {gobuilddir}/bin/* % {buildroot}% {_bindir}/
 
 %check
 ##% gocheck
@@ -58,7 +60,7 @@ make build/operator-sdk
 %files
 # % license % {golicenses}
 # % doc % {godocs}
-# % {_bindir}/*
+%{_bindir}/*
 
 %gopkgfiles
 
