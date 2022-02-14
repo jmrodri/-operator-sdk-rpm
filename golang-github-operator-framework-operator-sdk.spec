@@ -1,4 +1,6 @@
 ## https://github.com/square/go-jose
+%global with_debug 0
+%global debug_package %{nil}
 %global goipath         github.com/operator-framework/operator-sdk
 Version:        1.17.0
 
@@ -47,16 +49,16 @@ make build/operator-sdk
 
 %install
 %gopkginstall
-install -m 0755 -vd                     %{buildroot}%{_bindir}
-install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
+# install -m 0755 -vd                     %{buildroot}%{_bindir}
+# install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %check
-%gocheck
+##% gocheck
 
 %files
-%license %{golicenses}
-%doc %{godocs}
-%{_bindir}/*
+# % license % {golicenses}
+# % doc % {godocs}
+# % {_bindir}/*
 
 %gopkgfiles
 
