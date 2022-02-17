@@ -25,6 +25,22 @@ Source0:        %{gosource}
 BuildRequires:  golang(k8s.io/apimachinery/pkg/apis/meta/v1)
 BuildRequires:  golang(k8s.io/apimachinery/pkg/runtime)
 BuildRequires:  golang(k8s.io/apimachinery/pkg/runtime/schema)
+BuildRequires:  golang(github.com/blang/semver)
+BuildRequires:  golang(github.com/sirupsen/logrus)
+BuildRequires:  golang(github.com/spf13/cobra)
+BuildRequires:  golang(github.com/stretchr/testify/require)
+BuildRequires:  golang(k8s.io/api/admissionregistration/v1)
+BuildRequires:  golang(k8s.io/api/apps/v1)
+BuildRequires:  golang(k8s.io/api/core/v1)
+BuildRequires:  golang(k8s.io/api/policy/v1beta1)
+BuildRequires:  golang(k8s.io/api/rbac/v1)
+BuildRequires:  golang(k8s.io/api/scheduling/v1)
+BuildRequires:  golang(k8s.io/apiextensions-apiserver/pkg/apis/apiextensions)
+BuildRequires:  golang(k8s.io/client-go/tools/record)
+BuildRequires:  golang(sigs.k8s.io/controller-runtime/pkg/scheme)
+BuildRequires:  golang(k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/validation)
+BuildRequires:  golang(k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1)
+BuildRequires:  golang(k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1)
 
 %description
 %{common_description}
